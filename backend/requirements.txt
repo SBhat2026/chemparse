@@ -1,0 +1,9 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+pytest>=8.0
+# Optional but recommended for real-world files (regex fallback works without it):
+cclib>=1.8
+# Optional: swap into converters/ for heavy/edge-case real-world GTF/GFF3:
+# biopython>=1.83
+# gffutils>=0.12

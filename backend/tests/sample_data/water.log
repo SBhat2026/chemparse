@@ -1,0 +1,43 @@
+ Entering Gaussian System, Link 0=g16
+ ******************************************
+ Gaussian 16:  ES64L-G16RevC.01  3-Jul-2019
+ ******************************************
+ # opt freq hf/sto-3g
+
+ Water optimization + frequencies (synthetic fixture)
+
+                          Input orientation:
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          8           0        0.000000    0.000000    0.110000
+      2          1           0        0.000000    0.760000   -0.460000
+      3          1           0        0.000000   -0.760000   -0.460000
+ ---------------------------------------------------------------------
+
+ SCF Done:  E(RHF) =  -74.9650000000     A.U. after    8 cycles
+
+                          Standard orientation:
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          8           0        0.000000    0.000000    0.117790
+      2          1           0        0.000000    0.755450   -0.471160
+      3          1           0        0.000000   -0.755450   -0.471160
+ ---------------------------------------------------------------------
+
+ SCF Done:  E(RHF) =  -74.9659011447     A.U. after   10 cycles
+
+    Item               Value     Threshold  Converged?
+ Maximum Force            0.000012     0.000450     YES
+ RMS     Force            0.000008     0.000300     YES
+ Optimization completed.
+    -- Stationary point found.
+
+ Harmonic frequencies (cm**-1)
+
+ Frequencies --   1638.0312  3811.1289  3933.4207
+
+ Normal termination of Gaussian 16 at Thu Jan  1 00:00:00 2026.

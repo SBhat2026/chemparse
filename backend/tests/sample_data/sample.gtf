@@ -1,0 +1,5 @@
+chr1	havana	gene	1000	9000	.	+	.	gene_id "G1"; gene_name "FOO";
+chr1	havana	transcript	1000	9000	.	+	.	gene_id "G1"; transcript_id "T1";
+chr1	havana	exon	1000	1200	.	+	.	gene_id "G1"; transcript_id "T1";
+chr1	havana	exon	5000	5300	.	+	.	gene_id "G1"; transcript_id "T1";
+chr1	havana	CDS	1050	1200	.	+	0	gene_id "G1"; transcript_id "T1";

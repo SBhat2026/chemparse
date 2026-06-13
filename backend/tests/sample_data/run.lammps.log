@@ -1,0 +1,11 @@
+LAMMPS (2 Aug 2023)
+  using 1 OpenMP thread(s) per MPI task
+Reading data file ...
+  orthogonal box = (0 0 0) to (10 10 10)
+Per MPI rank memory allocation (min/avg/max) = 3.0 | 3.0 | 3.0 Mbytes
+   Step          Temp          E_pair         E_mol          TotEng         Press
+         0   0             -8.0000000      0             -8.0000000     -1000.0000
+        10   100.00000     -7.5000000      0             -7.0000000     -500.00000
+        20   150.00000     -7.2000000      0             -6.5000000     -250.00000
+Loop time of 0.001 on 1 procs for 20 steps
+Total wall time: 0:00:00

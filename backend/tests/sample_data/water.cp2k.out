@@ -1,0 +1,28 @@
+ DBCSR| CPU Multiplication driver
+ CP2K| version string:                                    CP2K version 2024.1
+ CP2K| source code revision number:                                  git:abc123
+
+ CELL| Vector a [angstrom]:      10.000000      0.000000      0.000000
+ CELL| Vector b [angstrom]:       0.000000     10.000000      0.000000
+ CELL| Vector c [angstrom]:       0.000000      0.000000     10.000000
+
+ MODULE QUICKSTEP:  ATOMIC COORDINATES IN ANGSTROM
+
+  Atom  Kind  Element       X           Y           Z
+     1     1   O           0.000000    0.000000    0.117790
+     2     2   H           0.000000    0.755450   -0.471160
+     3     2   H           0.000000   -0.755450   -0.471160
+
+ SCF run converged in    12 steps.
+
+ ENERGY| Total FORCE_EVAL ( QS ) energy [a.u.]:                  -17.1639008912
+
+ ATOMIC FORCES in [a.u.]
+
+ # Atom   Kind   Element          X              Y              Z
+      1      1      O           0.00000000     0.00000000     0.01234567
+      2      2      H           0.00000000     0.00100000    -0.00617000
+      3      2      H           0.00000000    -0.00100000    -0.00617000
+ SUM OF ATOMIC FORCES           0.00000000     0.00000000     0.00000567
+
+ The number of warnings for this run is : 0

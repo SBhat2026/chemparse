@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChemParse — computational chemistry outputs into clean data</title>
+  <meta name="description" content="Turn Gaussian, LAMMPS, and CP2K output files into clean JSON/CSV in seconds." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* tiny gradient accent; everything else is utility classes */
+    .grid-bg { background-image: radial-gradient(circle at 1px 1px, rgba(148,163,184,.18) 1px, transparent 0); background-size: 22px 22px; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased">
+
+  <!-- HERO -->
+  <header class="grid-bg border-b border-slate-800">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 py-5">
+      <span class="font-semibold tracking-tight text-lg">Chem<span class="text-emerald-400">Parse</span></span>
+      <a href="#pricing" class="text-sm text-slate-300 hover:text-white">Pricing</a>
+    </nav>
+    <div class="max-w-3xl mx-auto px-6 py-24 text-center">
+      <span class="inline-block mb-5 text-xs font-medium uppercase tracking-widest text-emerald-400">For computational chemists</span>
+      <h1 class="text-4xl sm:text-5xl font-bold leading-tight">
+        Turn messy chemistry output files into clean, structured data.
+      </h1>
+      <p class="mt-6 text-lg text-slate-300">
+        Upload a Gaussian, LAMMPS, or CP2K log. Get energies, geometries, SCF convergence,
+        and frequencies as tidy JSON or CSV — no scripts, no regex, no wasted afternoon.
+      </p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#email" class="rounded-lg bg-emerald-500 px-6 py-3 font-medium text-slate-950 hover:bg-emerald-400">Get early access</a>
+        <a href="#pricing" class="rounded-lg border border-slate-700 px-6 py-3 font-medium hover:border-slate-500">See pricing</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SUPPORTED FORMATS -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <h2 class="text-center text-2xl font-semibold">Supported formats</h2>
+    <p class="text-center text-slate-400 mt-2">More parsers ship every week.</p>
+    <div class="mt-10 grid gap-5 sm:grid-cols-3">
+      <div class="rounded-xl border border-slate-800 p-6">
+        <h3 class="font-semibold text-emerald-400">Gaussian</h3>
+        <p class="mt-2 text-sm text-slate-300">.log / .out — final energy, optimized geometry, SCF convergence, harmonic frequencies.</p>
+        <span class="mt-3 inline-block text-xs text-emerald-400">Available now</span>
+      </div>
+      <div class="rounded-xl border border-slate-800 p-6">
+        <h3 class="font-semibold">LAMMPS</h3>
+        <p class="mt-2 text-sm text-slate-300">log / dump — thermo tables and trajectory frames into flat tables.</p>
+        <span class="mt-3 inline-block text-xs text-slate-400">In progress</span>
+      </div>
+      <div class="rounded-xl border border-slate-800 p-6">
+        <h3 class="font-semibold">CP2K</h3>
+        <p class="mt-2 text-sm text-slate-300">output — total energies, geometries, and vibrational analysis.</p>
+        <span class="mt-3 inline-block text-xs text-slate-400">In progress</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING (placeholder amounts) -->
+  <section id="pricing" class="border-y border-slate-800 bg-slate-900/40">
+    <div class="max-w-5xl mx-auto px-6 py-20">
+      <h2 class="text-center text-2xl font-semibold">Simple pricing</h2>
+      <div class="mt-10 grid gap-5 sm:grid-cols-3">
+        <div class="rounded-xl border border-slate-800 p-7 bg-slate-950">
+          <h3 class="font-semibold">Pay per parse</h3>
+          <p class="mt-3 text-3xl font-bold">$<span data-price="per-parse">Z</span></p>
+          <p class="text-sm text-slate-400">per file</p>
+          <ul class="mt-5 space-y-2 text-sm text-slate-300">
+            <li>One file, full structured output</li>
+            <li>JSON + CSV download</li>
+            <li>No account needed</li>
+          </ul>
+          <!-- swap href for the Stripe Payment Link -->
+          <a href="#" data-stripe="per-parse" class="mt-6 block rounded-lg border border-slate-700 px-4 py-2 text-center text-sm hover:border-slate-500">Choose</a>
+        </div>
+        <div class="rounded-xl border-2 border-emerald-500 p-7 bg-slate-950 relative">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-emerald-500 px-3 py-0.5 text-xs font-medium text-slate-950">Popular</span>
+          <h3 class="font-semibold">Monthly</h3>
+          <p class="mt-3 text-3xl font-bold">$<span data-price="monthly">Y</span></p>
+          <p class="text-sm text-slate-400">per month</p>
+          <ul class="mt-5 space-y-2 text-sm text-slate-300">
+            <li>Unlimited parses</li>
+            <li>All formats as they ship</li>
+            <li>Batch upload</li>
+          </ul>
+          <a href="#" data-stripe="monthly" class="mt-6 block rounded-lg bg-emerald-500 px-4 py-2 text-center text-sm font-medium text-slate-950 hover:bg-emerald-400">Choose</a>
+        </div>
+        <div class="rounded-xl border border-slate-800 p-7 bg-slate-950">
+          <h3 class="font-semibold">One-time</h3>
+          <p class="mt-3 text-3xl font-bold">$<span data-price="one-time">X</span></p>
+          <p class="text-sm text-slate-400">lifetime</p>
+          <ul class="mt-5 space-y-2 text-sm text-slate-300">
+            <li>Self-host the parser</li>
+            <li>Source + CLI</li>
+            <li>Free updates</li>
+          </ul>
+          <a href="#" data-stripe="one-time" class="mt-6 block rounded-lg border border-slate-700 px-4 py-2 text-center text-sm hover:border-slate-500">Choose</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMAIL CAPTURE -->
+  <section id="email" class="max-w-xl mx-auto px-6 py-20 text-center">
+    <h2 class="text-2xl font-semibold">Get notified at launch</h2>
+    <p class="mt-2 text-slate-400">Drop your email and we'll send a free parse credit when we go live.</p>
+    <!-- POSTs to a placeholder endpoint; wire to your form handler / Worker -->
+    <form id="capture" action="https://example.com/api/subscribe" method="POST"
+          class="mt-6 flex flex-col sm:flex-row gap-3">
+      <input type="email" name="email" required placeholder="you@university.edu"
+             class="flex-1 rounded-lg bg-slate-900 border border-slate-700 px-4 py-3 text-sm focus:border-emerald-500 focus:outline-none" />
+      <button type="submit" class="rounded-lg bg-emerald-500 px-6 py-3 text-sm font-medium text-slate-950 hover:bg-emerald-400">Notify me</button>
+    </form>
+    <p id="capture-msg" class="mt-3 text-sm text-emerald-400 hidden">Thanks — you're on the list.</p>
+  </section>
+
+  <footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500">
+    ChemParse · built for researchers who'd rather not write another parser.
+  </footer>
+
+  <script>
+    // Optimistic UI; real submission still POSTs to the form action above.
+    document.getElementById('capture').addEventListener('submit', function () {
+      document.getElementById('capture-msg').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
